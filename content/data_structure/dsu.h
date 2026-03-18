@@ -5,9 +5,7 @@ struct DSU {
         iota(lead.begin(),lead.end(),0);
         sets = n;
     }
-    int find(int u) {
-        return lead[u] == u ? u : lead[u] = find(lead[u]);
-    }
+    int find(int u) { return lead[u] == u ? u : lead[u] = find(lead[u]); }
     bool add(int u,int v) {
         int x = find(u), y = find(v);
         if(x==y) return false;
