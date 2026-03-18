@@ -1,0 +1,18 @@
+# Build directory
+build/
+
+# LaTeX temporary files
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Minted specific
+_minted-*/
+*.minted
+
+# Main intermediate PDF
+main.pdf

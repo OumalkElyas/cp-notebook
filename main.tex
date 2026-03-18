@@ -1,0 +1,27 @@
+\documentclass[8pt, landscape, a4paper]{extarticle}
+
+% Pull in all settings, colors, and custom commands from config.tex
+\input{config.tex} 
+
+\begin{document}
+\begin{multicols*}{3}
+
+% --- Cover & Title ---
+\begin{center}
+    \Large{\textbf{Competitive Programming Library}} \\
+    \vspace{0.2cm}
+    \normalsize{OE team}
+\end{center}
+\vspace{0.5cm}
+
+% --- Table of Contents ---
+{\scriptsize \tableofcontents}
+\vspace{1cm}
+
+% --- Your Content Sections ---
+\input{content/graph/graph.tex}
+\input{content/math/math.tex}
+% \input{content/strings/strings.tex}
+
+\end{multicols*}
+\end{document}
