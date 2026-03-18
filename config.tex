@@ -34,16 +34,24 @@
     frame=leftline,        
     framesep=2mm,
     numbersep=4pt,
+    xleftmargin=12pt,
     baselinestretch=0.9,   
-    style=vs               
+    style=colorful               
 }
 
 % --- Custom Command for Inserting Code ---
-\newcommand{\includecodesnippet}[3]{
-    \vspace{-0.5em}
+% Usage: \includecodesnippet{Language}{Title}{Description}{path/to/file.ext}
+\newcommand{\includecodesnippet}[4]{
+    % Space before the subsection
+    \vspace{0.5em} 
     \subsection*{#2}
     \addcontentsline{toc}{subsection}{#2} 
-    \vspace{-0.5em}
-    \inputminted{#1}{#3}
-    \vspace{-0.5em}
+    
+    % The Description block (if you leave it empty {}, it just skips it)
+    {\scriptsize #3 \par}
+    
+    % Space between title/description and the code
+    \vspace{0.3em} 
+    
+    \inputminted{#1}{#4}
 }
